@@ -8,3 +8,14 @@ puts "Exercise 5"
 puts "----------"
 
 # Your code goes here ...
+total_revenue = Store.sum(:annual_revenue)
+avg_revenue = Store.average(:annual_revenue)
+stores_with_over_1M_revenue = Store.where("annual_revenue > ?", 1000000).count # ? is placeholder for 1M
+puts 'total_revenue'
+puts total_revenue
+puts '--------------------------------------'
+puts 'avg_revenue'
+puts avg_revenue
+puts '--------------------------------------'
+puts 'stores_with_over_1M_revenue'
+puts stores_with_over_1M_revenue
